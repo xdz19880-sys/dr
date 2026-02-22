@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>د. رمضان فارس الحروش | عيادة فرح للطب التجميلي والليزر</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Arabic font -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f9fbfd;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logo span {
+            color: #ffd700;
+            font-size: 1rem;
+            display: block;
+            font-weight: 300;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(105deg, #f8fafc 0%, #e3f2fd 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 5% 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(42,82,152,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #1e3c72;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text h1 span {
+            color: #2a5298;
+            display: block;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .doctor-badge {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .doctor-badge-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .doctor-badge-item i {
+            color: #2a5298;
+            font-size: 1.2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            box-shadow: 0 10px 20px rgba(42,82,152,0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(42,82,152,0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1e3c72;
+            border: 2px solid #1e3c72;
+        }
+
+        .btn-secondary:hover {
+            background: #1e3c72;
+            color: white;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 30px;
+            box-shadow: 0 30px 40px -20px rgba(0,0,0,0.3);
+        }
+
+        .floating-card {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .floating-card i {
+            color: #2a5298;
+            font-size: 2rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 5%;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: #1e3c72;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #f8fafc;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid #eef2f6;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: #2a5298;
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #f8fafc 0%, #e3f2fd 100%);
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 30px 40px -20px rgba(0,0,0,0.3);
+        }
+
+        .experience-badge {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 2rem;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .experience-badge .number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .experience-badge .text {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: #1e3c72;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: #555;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .features-list i {
+            color: #2a5298;
+            font-size: 1.3rem;
+        }
+
+        .doctor-info {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .doctor-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .doctor-info-item i {
+            color: #2a5298;
+            font-size: 1.5rem;
+        }
+
+        /* Appointment Section */
+        .appointment {
+            padding: 6rem 5%;
+            background: white;
+        }
+
+        .appointment-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            background: linear-gradient(135deg, #f8fafc, #ffffff);
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .appointment-info h3 {
+            font-size: 2rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .appointment-info p {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item i {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-item .info h4 {
+            color: #1e3c72;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-item .info p {
+            color: #666;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .appointment-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #e0e7ed;
+            border-radius: 10px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2a5298;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(42,82,152,0.3);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+        }
+
+        .testimonials .section-title h2 {
+            color: white;
+        }
+
+        .testimonials .section-title p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .testimonials-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .testimonial-card i {
+            color: #ffd700;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: #ffd700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e3c72;
+            font-weight: 900;
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0a1a2f;
+            color: white;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-col h3 {
+            color: #ffd700;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-col p {
+            color: #b0c4de;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #b0c4de;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #ffd700;
+            color: #0a1a2f;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #b0c4de;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto 2rem;
+            }
+
+            .doctor-badge {
+                justify-content: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .about-container,
+            .appointment-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-card {
+                position: static;
+                margin-top: 1rem;
+            }
+
+            .experience-badge {
+                width: 80px;
+                height: 80px;
+                padding: 1rem;
+            }
+
+            .experience-badge .number {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>د. رمضان فارس <span>عيادة فرح للطب التجميلي والليزر</span></h1>
+            </div>
+            <nav class="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#services">الخدمات</a>
+                <a href="#about">من نحن</a>
+                <a href="#appointment">حجز موعد</a>
+                <a href="#contact">اتصل بنا</a>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>
+                    د. رمضان فارس الحروش
+                    <span>متخصص في الطب التجميلي والليزر</span>
+                </h1>
+                <p>نقدم أحدث التقنيات في مجال التجميل والليزر تحت إشراف طبي متخصص، مع توفير بيئة مريحة وآمنة للرجال والنساء.</p>
+                
+                <div class="doctor-badge">
+                    <div class="doctor-badge-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>خبرة 10+ سنوات</span>
+                    </div>
+                    <div class="doctor-badge-item">
+                        <i class="fas fa-users"></i>
+                        <span>5000+ مريض</span>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#appointment" class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i>
+                        احجز موعدك الآن
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i>
+                        تعرف على خدماتنا
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://placehold.co/600x400/1e3c72/white?text=عيادة+فرح+الطبية" alt="عيادة الدكتور رمضان فارس">
+                <div class="floating-card">
+                    <i class="fas fa-star" style="color: #ffd700;"></i>
+                    <div>
+                        <strong>تقييم المرضى</strong>
+                        <p>⭐⭐⭐⭐⭐ 4.9/5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>خدماتنا التجميلية المتطورة</h2>
+            <p>نقدم أحدث التقنيات في مجال الطب التجميلي والليزر تحت إشراف الدكتور رمضان فارس</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-face-smile"></i>
+                </div>
+                <h3>علاج التصبغات</h3>
+                <p>باستخدام جهاز البيكوشور الأمريكي (Cynosure) المتطور لإزالة التصبغات والبقع الجلدية</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>إزالة الشعر بالليزر</h3>
+                <p>تقنية آمنة وفعالة لإزالة الشعر بشكل دائم مع راحة تامة أثناء الجلسات</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3>علاجات تجميلية للبشرة</h3>
+                <p>مجموعة متكاملة من العلاجات لتجديد شباب البشرة ونضارتها</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3>فحوصات طبية شاملة</h3>
+                <p>تقييم دقيق للحالة الصحية للبشرة قبل البدء في أي علاج</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://placehold.co/600x600/2a5298/white?text=الدكتور+رمضان+فارس" alt="الدكتور رمضان فارس">
+                <div class="experience-badge">
+                    <span class="number">10+</span>
+                    <span class="text">سنوات خبرة</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>الدكتور رمضان فارس الحروش</h2>
+                <p>طبيب مختص في الطب التجميلي والليزر، يشرف على عيادة فرح للطب التجميلي والليزر في الحروش، ولاية سكيكدة.</p>
+                
+                <ul class="features-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>يعمل بالتعاون مع زوجته الدكتورة كريط خولة لتوفير راحة تامة للمرضى</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>يتولى الدكتور رمضان علاج الرجال، بينما تشرف الدكتورة كريط على علاج النساء</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>نستخدم أحدث الأجهزة والتقنيات العالمية في العلاج</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>نهتم بتوفير بيئة مريحة وآمنة لجميع المراجعين</span>
+                    </li>
+                </ul>
+
+                <div class="doctor-info">
+                    <div class="doctor-info-item">
+                        <i class="fas fa-user-md"></i>
+                        <div>
+                            <strong>د. رمضان فارس</strong>
+                            <p>علاج الرجال</p>
+                        </div>
+                    </div>
+                    <div class="doctor-info-item">
+                        <i class="fas fa-user-nurse"></i>
+                        <div>
+                            <strong>د. كريط خولة</strong>
+                            <p>علاج النساء</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment" id="appointment">
+        <div class="appointment-container">
+            <div class="appointment-info">
+                <h3>احجز موعدك الآن</h3>
+                <p>نحن هنا لمساعدتك في رحلتك نحو بشرة أكثر صحة وإشراقاً. احجز موعدك وسنكون سعداء بخدمتك.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="info">
+                            <h4>اتصل بنا</h4>
+                            <p>0655 08 12 07</p>
+                            <p>0676 49 42 28</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info">
+                            <h4>العنوان</h4>
+                            <p>مجمع زيات الطبي، شارع بشير بوقادوم</p>
+                            <p>دائرة الحروش، ولاية سكيكدة - الجزائر</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="info">
+                            <h4>مواعيد العمل</h4>
+                            <p>السبت - الخميس: 9:00 صباحاً - 8:00 مساءً</p>
+                            <p>الجمعة: مغلق</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="appointment-form">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="الاسم الكامل" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" placeholder="رقم الهاتف" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="البريد الإلكتروني">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <select required>
+                                <option value="">اختر الخدمة</option>
+                                <option>علاج التصبغات</option>
+                                <option>إزالة الشعر بالليزر</option>
+                                <option>علاجات تجميلية للبشرة</option>
+                                <option>فحص طبي شامل</option>
+                                <option>استشارة</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">اختر الطبيب</option>
+                                <option>د. رمضان فارس (رجال)</option>
+                                <option>د. كريط خولة (نساء)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="time" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="ملاحظات إضافية (اختياري)"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        تأكيد الحجز
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>ماذا يقول مرضانا</h2>
+            <p>آراء بعض المرضى الذين وثقوا في خبراتنا</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right"></i>
+                <p>تجربة رائعة مع الدكتور رمضان، تعامل محترف ونتائج ممتازة في إزالة التصبغات. أنصح به بشدة.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">أحمد</div>
+                    <div class="author-info">
+                        <h4>أحمد م.</h4>
+                        <p>مريض</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right"></i>
+                <p>الدكتورة كريط خولة كانت رائعة معي، شرحت لي كل شيء بالتفصيل وجعلتني أشعر بالراحة. النتائج ممتازة.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">فاطمة</div>
+                    <div class="author-info">
+                        <h4>فاطمة ز.</h4>
+                        <p>مريضة</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right"></i>
+                <p>العيادة نظيفة والجهاز حديث، فريق العمل متعاون جداً. سعيدة بالنتيجة بعد جلسات الليزر.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">سارة</div>
+                    <div class="author-info">
+                        <h4>سارة ك.</h4>
+                        <p>مريضة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>عيادة فرح للطب التجميلي</h3>
+                <p>نقدم أفضل الخدمات التجميلية بأحدث التقنيات وتحت إشراف طبي متخصص لضمان أفضل النتائج لمرضينا.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#appointment">حجز موعد</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>خدماتنا</h3>
+                <ul class="footer-links">
+                    <li><a href="#">علاج التصبغات</a></li>
+                    <li><a href="#">إزالة الشعر بالليزر</a></li>
+                    <li><a href="#">علاجات تجميلية للبشرة</a></li>
+                    <li><a href="#">فحوصات طبية</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>معلومات الاتصال</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-phone"></i> 0655 08 12 07</li>
+                    <li><i class="fas fa-phone"></i> 0676 49 42 28</li>
+                    <li><i class="fas fa-map-marker-alt"></i> مجمع زيات الطبي، شارع بشير بوقادوم، الحروش، سكيكدة</li>
+                    <li><i class="fas fa-envelope"></i> info@dr-ramadan-fares.dz</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 - عيادة الدكتور رمضان فارس الحروش | تصميم وبرمجة: فرصة لخدمات الويب</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            // يمكن إضافة قائمة منبثقة للجوال هنا
+            alert('سيتم فتح القائمة في النسخة المحسنة');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Show success message (in real implementation, send to server)
+            alert('تم استلام طلب الحجز بنجاح! سنتواصل معك قريباً لتأكيد الموعد.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'linear-gradient(135deg, #0a1a2f 0%, #1e3c72 100%)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)';
+            }
+        });
+
+        // Animation on scroll (simple version)
+        const animateElements = document.querySelectorAll('.service-card, .testimonial-card, .about-content, .appointment-container');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animateElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

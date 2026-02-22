@@ -1,0 +1,487 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيادة فرح للطب التجميلي والليزر | د. رمضان فارس</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #008080; /* Teal - Medical & Trustworthy */
+            --secondary-color: #2c3e50; /* Dark Blue - Professional */
+            --accent-color: #e67e22; /* Orange - Call to Action */
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--secondary-color);
+            line-height: 1.6;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            margin-left: 20px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-book {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-book:hover {
+            background-color: #006666;
+            transform: translateY(-2px);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(0, 128, 128, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-cta {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-cta:hover {
+            background-color: #d35400;
+            transform: scale(1.05);
+        }
+
+        /* --- About Section --- */
+        .about {
+            padding: 80px 5%;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .section-subtitle {
+            color: #7f8c8d;
+            margin-bottom: 50px;
+        }
+
+        .doctors-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .doctor-card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 15px;
+            width: 300px;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .doctor-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* --- Services Section --- */
+        .services {
+            padding: 80px 5%;
+            background: var(--light-bg);
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            border-bottom: 5px solid var(--primary-color);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        /* --- Contact & Booking Form --- */
+        .contact {
+            padding: 80px 5%;
+            background: var(--white);
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 50px;
+        }
+
+        .contact-info, .booking-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .info-item i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-left: 15px;
+            width: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* --- Floating WhatsApp Button --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            left: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .nav-links {
+                display: none; /* Can add hamburger menu logic later */
+            }
+            .whatsapp-float {
+                left: 20px;
+                bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i class="fas fa-clinic-medical"></i> عيادة فرح
+            </div>
+            <nav class="nav-links">
+                <a href="#about">من نحن</a>
+                <a href="#services">خدماتنا</a>
+                <a href="#contact">اتصل بنا</a>
+            </nav>
+            <a href="#booking" class="btn-book">احجز موعدك الآن</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>استعدي لإطلالة مشرقة وجديدة</h1>
+            <p>أحدث تقنيات الطب التجميلي والليزر في سكيكدة بإشراف د. رمضان فارس ود. كريط خولة.</p>
+            <a href="#booking" class="btn-cta">احصل على استشارة مجانية</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">نخبة من الأطباء المتخصصين</h2>
+        <p class="section-subtitle">نجمع بين الخبرة الطبية والتكنولوجيا الحديثة لخدمتكم</p>
+        
+        <div class="doctors-container">
+            <div class="doctor-card">
+                <i class="fas fa-user-md doctor-icon"></i>
+                <h3>د. رمضان فارس الحروش</h3>
+                <p>استشاري الطب التجميلي والليزر</p>
+                <small>متخصص في علاج الرجال والتجميل العام</small>
+            </div>
+            <div class="doctor-card">
+                <i class="fas fa-female doctor-icon"></i>
+                <h3>د. كريط خولة</h3>
+                <p>طبيبة مختصة</p>
+                <small>تشرف على قسم علاج النساء والتجميل</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">خدماتنا المتميزة</h2>
+        <p class="section-subtitle">نستخدم أحدث الأجهزة الأمريكية والأوروبية</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-magic"></i>
+                <h3>جهاز البيكوشور (Picoshure)</h3>
+                <p>الحل الأمثل للتخلص من التصبغات والندبات وتجديد شباب البشرة بأحدث تقنية ليزر.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-spa"></i>
+                <h3>إزالة الشعر بالليزر</h3>
+                <p>جلسات إزالة شعر نهائية وآمنة للرجال والنساء بأجهزة متطورة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-syringe"></i>
+                <h3>علاجات تجميلية</h3>
+                <p>حقن الفيلر، البوتوكس، وعلاجات الكولاجين لشد البشرة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-heartbeat"></i>
+                <h3>فحوصات شاملة</h3>
+                <p>تشخيص دقيق لمشاكل الجلد والشعر ووضع خطة علاجية مناسبة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2 class="section-title">تواصل معنا</h2>
+                <p style="margin-bottom: 20px;">نحن هنا للإجابة على استفساراتكم</p>
+                
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>مجمع زيات الطبي، شارع بشير بوقادوم، دائرة الحروش، سكيكدة</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>0655 08 12 07 / 0676 49 42 28</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>contact@farah-clinic.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>يومياً من السبت إلى الخميس: 9:00 ص - 8:00 م</span>
+                </div>
+            </div>
+
+            <!-- Booking Form -->
+            <div id="booking" class="booking-form">
+                <h2 class="section-title">احجز موعدك</h2>
+                <form id="appointmentForm" onsubmit="handleBooking(event)">
+                    <div class="form-group">
+                        <input type="text" placeholder="الاسم الكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="رقم الهاتف" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>نوع الخدمة المطلوبة</option>
+                            <option value="laser">إزالة الشعر بالليزر</option>
+                            <option value="picoshure">علاج تصبغات (بيكوشور)</option>
+                            <option value="consultation">استشارة عامة</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="رسالتك أو ملاحظات إضافية"></textarea>
+                    </div>
+                    <button type="submit" class="btn-cta" style="width: 100%; border: none;">تأكيد الحجز</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2023 عيادة فرح للطب التجميلي والليزر</p>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/213655081207" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Form Handling (Simulation)
+        function handleBooking(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = "جاري الإرسال...";
+            btn.style.backgroundColor = "#ccc";
+            
+            // Simulate server request
+            setTimeout(() => {
+                alert("شكراً لك! تم استلام طلبك وسيتم التواصل معك قريباً لتأكيد الموعد.");
+                event.target.reset();
+                btn.innerText = originalText;
+                btn.style.backgroundColor = "var(--accent-color)";
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
+```
